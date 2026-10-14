@@ -361,12 +361,6 @@ Contributions, issues, and feature requests are welcome!
 
 ---
 
-## 📄 License
-
-This project is licensed under the **ISC License**. Feel free to use and modify it for personal or commercial projects.
-
----
-
 <div align="center">
 
 Crafted with ❤️ and passion by **[Lovepreet Kaur](https://github.com/love25-codes)**
