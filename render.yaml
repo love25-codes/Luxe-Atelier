@@ -1,0 +1,27 @@
+services:
+  # ==============================================================================
+  # ShopKart Luxe - Full-Stack Unified Web Service
+  # Builds both client & server, serves the Vite frontend directly from Express
+  # ==============================================================================
+  - type: web
+    name: shop-kart-luxe
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DBURL
+        sync: false # Set this in the Render Dashboard with your MongoDB Atlas URI
+      - key: JWT_SECRET
+        generateValue: true
+      - key: RAZORPAY_KEY_ID
+        sync: false # Set this in the Render Dashboard
+      - key: RAZORPAY_KEY_SECRET
+        sync: false # Set this in the Render Dashboard
+      - key: CLIENT_URL
+        sync: false # Leave blank or set your custom domain

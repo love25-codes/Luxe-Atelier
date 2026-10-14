@@ -17,7 +17,7 @@
   Featuring Midnight Navy & Imperial Gold aesthetics, seamless JWT authentication, dynamic catalog browsing, personalized wishlist & cart, and secure Razorpay payment integration.
 </p>
 
-[🌟 Key Features](#-key-features) • [🛠️ Tech Stack](#️-tech-stack) • [🚀 Quick Start & Setup](#-quick-start--setup) • [🔑 Environment Variables](#-environment-variables) • [📡 API Reference](#-api-reference) • [📂 Project Architecture](#-project-architecture)
+[🌟 Key Features](#-key-features) • [🛠️ Tech Stack](#️-tech-stack) • [🚀 Quick Start & Setup](#-quick-start--setup) • [🔑 Environment Variables](#-environment-variables) • [📡 API Reference](#-api-reference) • [🌐 Deployment Guide](DEPLOYMENT.md) • [📂 Project Architecture](#-project-architecture)
 
 </div>
 
@@ -325,6 +325,13 @@ All backend endpoints are hosted with the base URL: `http://localhost:8000`
 
 ## 📜 Available Scripts
 
+### In the Root directory:
+- `npm run install:all`: Installs dependencies for both `server` and `client`.
+- `npm run build`: Installs all dependencies and compiles the client production bundle.
+- `npm start`: Starts the production Express server (serves both API & React client if compiled).
+- `npm run server`: Launches the backend server in development mode with Nodemon.
+- `npm run client`: Launches the Vite frontend development server.
+
 ### In the `client` directory:
 - `npm run dev`: Launches the Vite development server with Hot Module Replacement (HMR).
 - `npm run build`: Compiles production-ready optimized assets into the `dist` folder.
@@ -334,6 +341,18 @@ All backend endpoints are hosted with the base URL: `http://localhost:8000`
 ### In the `server` directory:
 - `npm run dev`: Runs the Express server with Nodemon for automatic restarting on file edits.
 - `npm start`: Runs the server with production Node.js.
+
+---
+
+## 🌐 Production Deployment
+
+Ready to go live? The codebase is pre-configured for instant zero-friction deployment on any modern platform:
+
+- **Option 1 (Recommended)**: [Vercel (Frontend)](https://vercel.com/) + [Render (Backend)](https://render.com/) — Free tier, global CDN edge performance.
+- **Option 2 (Single Service)**: [Render All-in-One](https://render.com/) — Deploy both frontend and backend on one single free Render Web Service using the included `render.yaml`.
+- **Option 3 (Containers)**: Deploy anywhere using the included `Dockerfile` and `docker-compose.yml`.
+
+👉 **See the complete step-by-step guide in [DEPLOYMENT.md](DEPLOYMENT.md)**.
 
 ---
 

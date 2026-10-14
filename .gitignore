@@ -1,7 +1,30 @@
 # Environment variables
 .env
+.env*.local
 **/.env
+**/.env*.local
 
 # Node modules
 node_modules/
 **/node_modules/
+
+# Production build outputs
+dist/
+dist-ssr/
+client/dist/
+**/dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/

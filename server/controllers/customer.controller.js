@@ -4,11 +4,13 @@ import { genToken } from "../utils/generateToken.js";
 import bcrypt from 'bcrypt';
 
 
-const isProd = process.env.NODE_ENV === "production";
-const cookiesOptions = {
-    httpOnly: true,
-    secure: isProd,
-    sameSite: isProd ? 'none' : 'lax'
+const getCookieOptions = () => {
+    const isProd = process.env.NODE_ENV === "production";
+    return {
+        httpOnly: true,
+        secure: isProd,
+        sameSite: isProd ? 'none' : 'lax'
+    };
 };
 
 
@@ -51,7 +53,7 @@ export const registerCustomer = async (req, res) => {
 
         //Creating a JWT Access Token
         const token = genToken(newCustomer._id)
-        res.cookie("token", token, cookiesOptions)
+        res.cookie("token", token, getCookieOptions())
 
         return res.status(201).json({
             success: true,
@@ -92,7 +94,7 @@ export const loginCustomer = async (req, res) => {
 
         //generating a token....
         const token = genToken(customer._id)
-        res.cookie("token", token, cookiesOptions)
+        res.cookie("token", token, getCookieOptions())
 
         return res.status(200).json({
             success: true,
@@ -123,7 +125,7 @@ export const getUser = async (req, res) => {
 //Logout the Customer...
 export const logoutCustomer = async (req, res) => {
     try {
-        res.clearCookie("token", cookiesOptions)
+        res.clearCookie("token", getCookieOptions())
         return res.status(200).json({ success: true, message: "Logged out successfully!" })
 
     } catch (error) {
