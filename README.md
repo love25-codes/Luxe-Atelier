@@ -369,7 +369,7 @@ This project is licensed under the **ISC License**. Feel free to use and modify 
 
 <div align="center">
 
-Crafted with ❤️ and passion by **[Luxe-Atelier Team](https://github.com/love25-codes)**
+Crafted with ❤️ and passion by **[Lovepreet Kaur](https://github.com/love25-codes)**
 
 *Excellence in every pixel. Elegance in every line of code.* ✨
 
